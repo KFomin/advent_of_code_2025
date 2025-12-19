@@ -25,10 +25,10 @@ for (const rotation of rotationsStrings) {
 
   while (rotationValue > 99) rotationValue -= 100;
 
-  console.log(rotationValue);
   currentPosition = rotate(currentPosition, rotationValue);
 
   if (currentPosition === 0) password += 1;
 }
 
+//ANSWER:
 console.log(password);
