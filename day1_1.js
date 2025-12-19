@@ -1,7 +1,7 @@
-import * as data from "./data.js";
+import {rotations} from "./data.js";
 
 const numbers = Array.from({ length: 100 }, (_, i) => i);
-const rotationsStrings = data.rotations.split("\n");
+const rotationsStrings = rotations.split("\n");
 let currentPosition = 50;
 let password = 0;
 
