@@ -5,7 +5,7 @@ Welcome to my AoC 2025 solutions! 🧝‍♂️ Each day brings a new challenge,
 ## Solutions 🎯
 
 - **Day 1** 🎁 - day1_1.js & day1_2.js
-- **Day 2** 🎁 -
+- **Day 2** 🎁 - day2_1.js & day2_2.js
 
 ...and many more to come! 🚀
 
