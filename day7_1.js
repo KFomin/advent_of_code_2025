@@ -151,10 +151,10 @@ async function goDownAndCountSplits(splits, lines, lastLineBeams) {
   let beautifulConsoleLogLine = currentLine;
 
   newBeamCoordinates.forEach((beamCoordinate) => {
-    beautifulConsoleLogLine =
-      beautifulConsoleLogLine.substring(0, beamCoordinate) +
-      "|" +
-      beautifulConsoleLogLine.substring(beamCoordinate + 1);
+    beautifulConsoleLogLine = [
+      beautifulConsoleLogLine.substring(0, beamCoordinate),
+      beautifulConsoleLogLine.substring(beamCoordinate + 1),
+    ].join("|");
   });
 
   console.log(beautifulConsoleLogLine);
