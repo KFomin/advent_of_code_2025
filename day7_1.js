@@ -122,11 +122,12 @@
 // Analyze your manifold diagram. How many times will the beam be split?
 
 import { tachyonManifolds } from "./data.js";
+import { sleep } from "./utils.js";
 
 const tachyonLines = tachyonManifolds.split("\n");
 
-function goDownAndCountSplits(splits, lines, lastLineBeams) {
-  console.log(lines.length);
+async function goDownAndCountSplits(splits, lines, lastLineBeams) {
+  await sleep(25);
   const [currentLine, ...rest] = lines;
   let newSplits = splits;
   let newBeamCoordinates = [];
@@ -146,6 +147,17 @@ function goDownAndCountSplits(splits, lines, lastLineBeams) {
       newBeamCoordinates.push(beamCoordinate - 1);
     }
   });
+
+  let beautifulConsoleLogLine = currentLine;
+
+  newBeamCoordinates.forEach((beamCoordinate) => {
+    beautifulConsoleLogLine =
+      beautifulConsoleLogLine.substring(0, beamCoordinate) +
+      "|" +
+      beautifulConsoleLogLine.substring(beamCoordinate + 1);
+  });
+
+  console.log(beautifulConsoleLogLine);
 
   // avoid duplicated beam coordinates
   newBeamCoordinates = Array.from(new Set(newBeamCoordinates));
