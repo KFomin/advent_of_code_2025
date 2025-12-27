@@ -167,4 +167,4 @@ async function goDownAndCountSplits(splits, lines, lastLineBeams) {
   return goDownAndCountSplits(newSplits, rest, newBeamCoordinates);
 }
 
-console.log(goDownAndCountSplits(0, tachyonLines, []));
+console.log(await goDownAndCountSplits(0, tachyonLines, []));
